@@ -18,11 +18,13 @@ Instrukcja i sprawozdanie z instalacji oraz konfiguracji zabbixa. Dodatkowym zad
      ```bash 
      vim /etc/php.ini
      ```
-	*date.timezone = Asia/Jakarta
-max_execution_time = 600
-max_input_time = 600
-memory_limit = 256M
-post_max_size = 32M
-upload_max_filesize = 16M*
+	*
+         date.timezone = Asia/Jakarta
+         max_execution_time = 600
+         max_input_time = 600
+         memory_limit = 256M
+         post_max_size = 32M
+         upload_max_filesize = 16M
+         *
       
 
