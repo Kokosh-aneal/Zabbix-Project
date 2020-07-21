@@ -10,6 +10,6 @@ Instrukcja i sprawozdanie z instalacji oraz konfiguracji zabbixa. Dodatkowym zad
 ## Instalacja
 1. Tutaj powinna pojawić się instalacja oraz konfiguracja serwera httpd, natomiast to już zrobiłem instalując munina, zatem pomijam ten krok
 2. Instalacja PHP
-   a. Dociągnięcie potrzebnych paczek php 
-      ```bash dnf install php-cli php-common php-devel php-pear php-gd php-mbstring php-mysqlnd php-xml php-bcmath``` 
+   - Dociągnięcie potrzebnych paczek php 
+     -  ```bash dnf install php-cli php-common php-devel php-pear php-gd php-mbstring php-mysqlnd php-xml php-bcmath``` 
 
