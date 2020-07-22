@@ -72,3 +72,10 @@ Current mode:                   permissive
 ...
 ```
 I powinno wszystko działać. Natomiast nie jest to dobre rozwiązanie, ponieważ raczej chcemy, żeby selinux działało i możliwie dobrze chroniło.
+### HTTPD
+Tutaj również pojawił się problem, nie z SELinux natomiast z firewall-cmd. To możemy naprawić w dość prosty sposób:
+```bash
+:~# firewall-cmd --permanent --add-port=80/tcp
+:~# firewall-cmd --reload
+```
+Wówczas powinien nam się pojawić ruch na danym porcie, gdy będziemy próbowali się dostać do zabbixa (i powinno działać)
