@@ -59,3 +59,16 @@ php_value[date.timezone] = Europe/Warsaw
 :~# systemctl start zabbix-server zabbix-agent httpd php-fpm
 ```
 ## Problemy podczas instalacji
+### SELinux
+Jak zwykle selinux wycina zabbixa (munina też wycinał). Można to "naprawić" w prosty sposób ustawiając tryb pracy sel na "permissive" w taki sposób:
+```bash
+:~# setenforce 0
+```
+Wówczas możemy sprawdzić status
+```bash
+:~# sestatus
+...
+Current mode:                   permissive
+...
+```
+I powinno wszystko działać. Natomiast nie jest to dobre rozwiązanie, ponieważ raczej chcemy, żeby selinux działało i możliwie dobrze chroniło.
