@@ -58,3 +58,4 @@ php_value[date.timezone] = Europe/Warsaw
 :~# systemctl enable zabbix-server zabbix-agent httpd php-fpm
 :~# systemctl start zabbix-server zabbix-agent httpd php-fpm
 ```
+## Problemy podczas instalacji
