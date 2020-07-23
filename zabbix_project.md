@@ -72,7 +72,7 @@ Current mode:                   permissive
 ...
 ```
 I powinno wszystko działać. Natomiast nie jest to dobre rozwiązanie, ponieważ raczej chcemy, żeby selinux działało i możliwie dobrze chroniło.
-Do rozwiązania tego problemu można wykorzystać sprytne narzędzie jakim jest audit2allow. Generuje ono polityki dla SELinux na podstawie logów operacji odrzucenia (również ciekawym narzędziem jest audit2why, które tłumaczy użytkownikowi dlaczego został odrzucony).
+Do [rozwiązania](https://zabbixonly.com/how-to-create-selinux-policies-for-zabbix/) tego problemu można wykorzystać sprytne narzędzie jakim jest audit2allow. Generuje ono polityki dla SELinux na podstawie logów operacji odrzucenia (również ciekawym narzędziem jest audit2why, które tłumaczy użytkownikowi dlaczego został odrzucony).
 ```bash
 :~# cat /var/log/audit/audit.log | grep zabbix_server | grep denied | audit2allow -M zabbix_server.limits
 ```
