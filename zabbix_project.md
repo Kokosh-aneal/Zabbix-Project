@@ -100,3 +100,8 @@ Natomiast po drugiej stronie musimy zainstalować agenta zabbixowego (w tym wypa
 ```bash
 :~# apt install zabbix-agent
 ```
+Na koniec trzeba wpisać adres serwera w konfiguracji agenta  
+```bash
+:~# vim /etc/zabbix/zabbix_agentd.conf
+Server=/*server_IP*/
+```
