@@ -96,3 +96,7 @@ Aby dodać hosta do zabbixa trzeba wejść w Configuration->Hosts, następnie mu
 ![Create Host](createhost.png)  
  Następnie musimy podać dane naszego hosta.  
 ![Menu](create_menu.png)  
+Natomiast po drugiej stronie musimy zainstalować agenta zabbixowego (w tym wypadku na debianie)  
+```bash
+:~# apt install zabbix-agent
+```
