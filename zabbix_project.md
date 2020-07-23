@@ -105,3 +105,5 @@ Na koniec trzeba wpisać adres serwera w konfiguracji agenta
 :~# vim /etc/zabbix/zabbix_agentd.conf
 Server=/*server_IP*/
 ```
+## Dodawanie wykresów
+Dodawanie wykresów jest bardzo proste, tworzymy item z odpowiednimi [flagami](https://www.zabbix.com/documentation/current/manual/config/items/itemtypes/zabbix_agent) a następnie tworzymy wykres i wybieramy item, który ma być rysowany
