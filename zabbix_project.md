@@ -91,3 +91,4 @@ Tutaj również pojawił się problem, nie z SELinux natomiast z firewall-cmd. T
 :~# firewall-cmd --reload
 ```
 Wówczas powinien nam się pojawić ruch na danym porcie, gdy będziemy próbowali się dostać do zabbixa (i powinno działać)
+## Dodawanie hostów do Zabbixa
