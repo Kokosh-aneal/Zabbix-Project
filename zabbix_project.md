@@ -72,6 +72,18 @@ Current mode:                   permissive
 ...
 ```
 I powinno wszystko działać. Natomiast nie jest to dobre rozwiązanie, ponieważ raczej chcemy, żeby selinux działało i możliwie dobrze chroniło.
+Do rozwiązania tego problemu można wykorzystać sprytne narzędzie jakim jest audit2allow. Generuje ono polityki dla SELinux na podstawie logów operacji odrzucenia (również ciekawym narzędziem jest audit2why, które tłumaczy użytkownikowi dlaczego został odrzucony).
+```bash
+:~# cat /var/log/audit/audit.log | grep zabbix_server | grep denied | audit2allow -M zabbix_server.limits
+```
+To polecenie stworzy nam politykę dla SEL, następnie musimy ją załadować
+```bash
+:~# semodule -i zabbix_server.limits.pp
+```
+Teraz można uruchomić zabbix-server i powinno być wszystko w porządku
+```bash
+:~# systemctl start zabbix-server
+```
 ### HTTPD
 Tutaj również pojawił się problem, nie z SELinux natomiast z firewall-cmd. To możemy naprawić w dość prosty sposób:
 ```bash
