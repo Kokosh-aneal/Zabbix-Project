@@ -92,3 +92,4 @@ Tutaj również pojawił się problem, nie z SELinux natomiast z firewall-cmd. T
 ```
 Wówczas powinien nam się pojawić ruch na danym porcie, gdy będziemy próbowali się dostać do zabbixa (i powinno działać)
 ## Dodawanie hostów do Zabbixa
+Aby dodać hosta do zabbixa trzeba wejść w Configuration->Hosts, następnie musimy wejśc w zakładkę "Create Host" ![Create Host](createhost.png)
