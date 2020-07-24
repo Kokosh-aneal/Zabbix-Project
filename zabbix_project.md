@@ -109,6 +109,6 @@ Server=/*server_IP*/
 Dodawanie wykresów jest bardzo proste, tworzymy item z odpowiednimi [flagami](https://www.zabbix.com/documentation/current/manual/config/items/itemtypes/zabbix_agent) a następnie tworzymy wykres i wybieramy item, który ma być rysowany
 ## Network Weathermap
 Okazało się, że zabbix ma wbudowaną możliwość tworzenia map oraz połączeń między nimi.
-1. Definiujemy trigger, czyli coś co będzie sprawdzało czy jest spełniony dany warunek (np. łącze działa wolniej niż normalnie/zostało wysycone w x%)
+1. Definiujemy trigger, czyli coś co będzie sprawdzało czy jest spełniony dany warunek (np. łącze działa wolniej niż normalnie/zostało wysycone w x%)  
 ![Network map](local-ntwrk-map.png)
 
