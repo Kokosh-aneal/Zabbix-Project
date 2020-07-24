@@ -110,5 +110,6 @@ Dodawanie wykresów jest bardzo proste, tworzymy item z odpowiednimi [flagami](h
 ## Network Weathermap
 Okazało się, że zabbix ma wbudowaną możliwość tworzenia map oraz połączeń między nimi.
 1. Definiujemy trigger, czyli coś co będzie sprawdzało czy jest spełniony dany warunek (np. łącze działa wolniej niż normalnie/zostało wysycone w x%)  
-![Network map](local-ntwrk-map.png)
-
+![Network map](local-ntwrk-map.png)  
+połączenie - nazwa nadawana przez użytkownika danemu połączeniu, może być np 10 mb/s itp.
+wysycenie - nazwa triggeru, który zmienia kolor połączenia na czerwony kiedy jest jakiś problem
