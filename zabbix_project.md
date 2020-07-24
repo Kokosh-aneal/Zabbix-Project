@@ -24,12 +24,12 @@ Instrukcja i sprawozdanie z instalacji oraz konfiguracji zabbixa. Dodatkowym zad
  :~# dnf install mysql
  :~# dnf install php
  ```
- 5. Następnie trzeba skonfigurować mysql oraz stworzyć bazę danych dla zabbixa
+ 5. Następnie trzeba skonfigurować mysql oraz stworzyć bazę danych dla zabbixa  
  ```bash
  :~# systemctl start mysqld.service
  :~# mysql_secure_installation
  ```
-   6. Teraz można zabrać sie za konfigurację mysql'a . Po wejściu do mysql'a trzeba stworzyć bazę danych oraz użytkownika zabbix, któremu damy uprawnienia do bd
+ 6. Teraz można zabrać sie za konfigurację mysql'a . Po wejściu do mysql'a trzeba stworzyć bazę danych oraz użytkownika zabbix, któremu damy uprawnienia do bd
   ```bash
   :~# mysql -u root -p
   ```
@@ -39,21 +39,21 @@ mysql> create user zabbix@localhost identified by 'password';
 mysql> grant all privileges on zabbix.* to zabbix@localhost;  
 mysql> quit;
 ```
-5. Następnie trzeba zaimportować domyślne pliki sql'a. (Trochę to trwa, nie wolno przerywać!)
+7. Następnie trzeba zaimportować domyślne pliki sql'a. (Trochę to trwa, nie wolno przerywać!)
 ```bash
 :~# zcat /usr/share/doc/zabbix-server-mysql*/create.sql.gz | mysql -uzabbix -p zabbix
 ```
-6. Ustawienie hasła do bazy danych
+8. Ustawienie hasła do bazy danych
 ```bash
 :~# vim /etc/zabbix/zabbix_server.conf
 DBPassword=password
 ```
-7. Ustawienie strefy czasowej
+9. Ustawienie strefy czasowej
 ```bash
 :~# vim /etc/php-fpm.d/zabbix.conf
 php_value[date.timezone] = Europe/Warsaw
 ```
-  8. Ostatnim krokiem jest uruchomienie odpowiednich usług
+10. Ostatnim krokiem jest uruchomienie odpowiednich usług
   ```bash 
 :~# systemctl enable zabbix-server zabbix-agent httpd php-fpm
 :~# systemctl start zabbix-server zabbix-agent httpd php-fpm
